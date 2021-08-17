@@ -34,3 +34,21 @@ $guess = "1470"; // Tahmin edilen değer
  * 
  * yazması gerekiyor.
  */
+
+
+if ($gender == "male") { //erkek ve kadına göre metebolizma hesaplaması yapıldı
+	$bmr = 88.362 + (13.397*$weight) + (4.799*$height) - (5.677*$age);
+} else {
+	$bmr = 447.593+(9.247*$weight)+(3.098*$height)-(4.330*$age);
+}
+
+echo "BMR: " . $bmr;
+
+if ($guess > $bmr) {//çıkan sonuca göre tahmini değerinin sonucunu dönderdik
+	echo "Tahmin değerinden küçük";
+} elseif ($guess == $bmr) {
+	echo "Tahmin değerine eşit";
+} else {
+	echo "Tahmin değerinden büyük";
+}
+
